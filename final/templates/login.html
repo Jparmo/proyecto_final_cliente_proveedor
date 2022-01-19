@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <form action="" method="post">
+    <form action="/login" method="post">
         {%csrf_token%}
-    <div id="formu">
+    <!-- <div id="formu">
         <div><input type="text" name="username" class="info" placeholder="usuario"></div>
         <div><input type="password" name="password" class="info" placeholder="password"></div>
         <div><input type="submit" value="Iniciar sesion"></div>
-    </div>
+    </div> -->
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button> Enviar </button>
     </form>    
 </body>
 </html>

@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <form action="" method="post">
+    <form action="/register" method="post">
         {%csrf_token%}
-    <div id="formu">
+    <!-- <div id="formu">
         <div><input type="text" name="username" class="info" placeholder="usuario"></div>
         <div><input type="text" name="first_name" class="info" placeholder="Nombre"></div>
         <div><input type="text" name="last_name" class="info" placeholder="Apellido"></div>
@@ -19,7 +19,12 @@
         <div><input type="password" name="password" class="info" placeholder="password"></div>
         <input type="radio" name="tipo" id="" value="cliente">Cliente <br> <input type="radio" name="tipo" id="" value="proveedor">Proveedor
         <div><input type="submit" value="Registrar"></div>
-    </div>
+    </div> -->
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button> Enviar </button>
+    <!-- {{ formset }} -->
     </form>    
 </body>
 </html>
