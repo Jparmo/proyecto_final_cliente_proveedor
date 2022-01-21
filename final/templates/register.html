@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
     {%load static%}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
     <form action="/register" method="post">
-        {%csrf_token%}
-    <!-- <div id="formu">
+      {%csrf_token%}
+      <!-- <div id="formu">
         <div><input type="text" name="username" class="info" placeholder="usuario"></div>
         <div><input type="text" name="first_name" class="info" placeholder="Nombre"></div>
         <div><input type="text" name="last_name" class="info" placeholder="Apellido"></div>
@@ -20,11 +20,17 @@
         <input type="radio" name="tipo" id="" value="cliente">Cliente <br> <input type="radio" name="tipo" id="" value="proveedor">Proveedor
         <div><input type="submit" value="Registrar"></div>
     </div> -->
-    <table>
-        {{ form.as_table }}
-    </table>
-    <button> Enviar </button>
-    <!-- {{ formset }} -->
-    </form>    
-</body>
+    <div id="contenedor">
+      <div id="hijo">
+        <h2>Registro</h2>
+        <table>
+          {{ form.as_table }}
+        </table>
+
+        <button>Enviar</button>
+      </div>
+    </div>
+      <!-- {{ formset }} -->
+    </form>
+  </body>
 </html>
